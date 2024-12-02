@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accenture School Student Portal</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+
+    /* Portal Container */
+    .portal-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Header */
+    .portal-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .portal-header h1 {
+      font-size: 24px;
+      color: #4c1e87;
+      margin: 0;
+    }
+
+    .portal-header p {
+      font-size: 14px;
+      color: #6f42c1;
+    }
+
+    /* Input Fields */
+    input[type="text"], input[type="password"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    /* Button */
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4c1e87;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #6f42c1;
+    }
+
+    /* Error Message */
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+    <!-- Portal Header -->
+    <div class="portal-header">
+      <h1>Accenture School Student Portal</h1>
+      <p>Log in to access your portal</p>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form">
+      <input type="text" id="username" placeholder="SRCODE or Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button class="login-button" onclick="login()">Log In</button>
+      <p id="error" class="error"></p>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Mock validation
+      if (username === 'student' && password === '1234') {
+        alert('Login successful!');
+      } else {
+        document.getElementById('error').innerText = 'Invalid SRCODE/Username or Password!';
+      }
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="portal-container">
+        <header class="header">
+            <div class="user-info">
+                <img src="profile-pic.jpg" alt="User Profile" class="profile-pic">
+                <h2>Welcome, Student Name</h2>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Assessment of Fees</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">Curriculum</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Subjects</a></li>
+                    <li><a href="#">Certificate of Registration</a></li>
+                    <li><a href="#">View ID</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="dashboard">
+                <h3>Dashboard</h3>
+                <div class="cards">
+                    <div class="card">
+                        <h4>My Grades</h4>
+                        <p>View your grades here.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Curriculum</h4>
+                        <p>Access your course curriculum.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Library</h4>
+                        <p>Browse the library or e-library.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Assessment of Fees</h4>
+                        <p>View your fee assessments.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- Navigation -->
+<div class="nav-bar">
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="library.html">Library</a></li>
+        <li><a href="assessment.html">Assessment of Fees</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="view-id.html">View ID</a></li>
+        <li><a href="certificate.html">Certificate of Registration</a></li>
+        <li><a href="#" id="logout-button">Log Out</a></li> <!-- Log-out button -->
+    </ul>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="grades.html">Grades</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="assessment.html">Assessment of Fees</a></li>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="view-id.html">View ID</a></li>
+            <li><a href="certificate.html">Certificate of Registration</a></li>
+            <li><a href="#" id="logout-button">Log Out</a></li> <!-- Log-out button -->
+        </ul>
+    </div>
+
+    <!-- Main Content (Example Dashboard) -->
+    <div class="content">
+        <h1>Welcome to Your Student Portal</h1>
+        <p>Access your grades, subjects, library, and more from the menu.</p>
+    </div>
+
+    <script src="portal.js"></script>
+</body>
+</html>
